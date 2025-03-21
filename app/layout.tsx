@@ -1,6 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+import { Montserrat } from 'next/font/google';
+import { Orbitron } from "next/font/google";
+import Footer from "@/components/Footer";
+
+
+
+const orbitron = Orbitron({ subsets: ['latin'],weight: ["400", "700", "900"], variable: '--font-orbitron' });
+
+const montserrat = Montserrat({ subsets: ['latin'],weight: ["100", "300", "400", "700", "900"], variable: '--font-montserrat' });
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -25,9 +35,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable}antialiased `}
       >
-        {children}
+        <Navbar />
+        <div className="px-0 sm:px-10">
+          {children}
+        </div>
+        <Footer />
       </body>
     </html>
   );

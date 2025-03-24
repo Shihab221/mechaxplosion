@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "NEXT_DISABLE_ESLINT=1 next build",
-    "start": "next start",
-    
+    "start": "next start"
   },
   "dependencies": {
     "next": "15.2.2",

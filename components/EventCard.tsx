@@ -1,8 +1,10 @@
+"use client"
 import React from 'react'
 import {eventCard} from "../Constant"
 import Link from 'next/link'
 import Image from 'next/image'
 import logo from "../public/images/logomie.png"
+import { motion } from "framer-motion";
 
 const EventCard = () => {
   return (
@@ -11,6 +13,13 @@ const EventCard = () => {
         <div className='flex flex-col sm:flex-row w-full grid grid-cols-2 sm:grid-cols-4'>
             {eventCard.map((item,index)=>(
                 <Link href={`/eventDetails/${item.id}`} key={index}>
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }} // Start hidden and move up
+                        whileInView={{ opacity: 1, x: 0 }} // Animate when it comes into view
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }} // Trigger only once
+                        className=""
+                        >
                     <div className='flex flex-col bg-neutral-900 mx-4 my-4 rounded-lg border-0.5 border-lime-400 hover:border-1 transition-all duration-300 ease-in '>
                         <Image
                             src={item.image}
@@ -28,10 +37,12 @@ const EventCard = () => {
                             </button>
                         </div>
                     </div>
+                    </motion.div>
                 </Link>
                 
             ))}
         </div>
+
     </div>
   )
 }

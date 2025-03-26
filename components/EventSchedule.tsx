@@ -3,7 +3,7 @@ import React from 'react'
 
 const EventSchedule = () => {
   return (
-    <div className='my-10 flex flex-col w-full items-center'>
+    <div id='schedule' className='my-10 flex flex-col w-full items-center'>
       <h2 className='text-2xl mb-10 font-orbitron font-bold text-lime-400'>EVENT SCHEDULE . . .</h2>
       <div className='flex flex-col sm:flex-row sm:justify-evenly w-full items-stretch'>
         <div className='bg-neutral-900 rounded-xl p-4 h-xl w-sm mb-6'>

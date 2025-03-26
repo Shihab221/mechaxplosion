@@ -17,9 +17,9 @@ const Gallery = () => {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }} // Trigger only once
               className=""
+              key={index}
               >
                 <Image 
-                key={index}
                 alt='Gallery_picture'
                 src={item.image}
                 width={100}

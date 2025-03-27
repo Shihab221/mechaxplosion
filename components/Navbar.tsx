@@ -20,7 +20,6 @@ const Navbar = () => {
         <li className='hover:text-lime-400 text-xl cursor-pointer transition-all duration-300 hover:font-semibold'>Gallery</li>
         <li className='hover:text-lime-400 text-xl cursor-pointer transition-all duration-300 hover:font-semibold'>Sponsers</li>
         <li className='hover:text-lime-400 text-xl cursor-pointer transition-all duration-300 hover:font-semibold'>Organizer</li>
-        <li className='hover:text-lime-400 text-xl cursor-pointer transition-all duration-300 hover:font-semibold'>About</li>
         <li className='hover:text-lime-400 text-xl cursor-pointer transition-all duration-300 hover:font-semibold'>Contact</li>
       </div>
     </div>
